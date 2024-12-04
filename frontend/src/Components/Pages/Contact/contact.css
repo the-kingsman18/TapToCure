@@ -1,0 +1,67 @@
+.contact {
+    text-align: center;       /* Center alignment */
+    font-size: 1.5rem;       /* Equivalent to text-2xl */
+    padding-top: 2.5rem;     /* Equivalent to pt-10 */
+    color: #6b7280;          /* Equivalent to text-gray-500 */
+}
+.custom-text-style {
+    color: #4b5563;       /* Equivalent to text-gray-700 */
+    font-weight: 600;     /* Equivalent to font-semibold */
+}
+.Pp6 {
+    margin-top: 2.5rem; /* my-10: margin-top: 10; margin-bottom: 10; */
+    margin-bottom: 7rem; /* mb-28: margin-bottom: 28 */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 2.5rem; /* gap-10: 2.5rem */
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) { /* md:flex-row */
+    .Pp6 {
+        flex-direction: row; 
+    }
+}
+.image {
+    width: 100%; /* w-full */
+    max-width: 360px; /* md:max-w-[360px] */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .image{
+        max-width: 360px; /* This will apply when the screen size is medium or larger */
+    }
+}
+.customdiv {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    justify-content: center; /* jus-center */
+    align-items: flex-start; /* items-start */
+    gap: 1.5rem; /* gap-6 (1.5rem = 6 * 0.25rem) */
+}
+.custompp {
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg (1.125rem = 18px) */
+    color: #4B5563; /* text-gray-600 (#4B5563 is the hex for Tailwind's text-gray-600) */
+}
+.explore {
+    border: 1px solid black; /* border border-black */
+    padding-left: 2rem; /* px-8 (2rem = 32px) */
+    padding-right: 2rem; /* px-8 (2rem = 32px) */
+    padding-top: 1rem; /* py-4 (1rem = 16px) */
+    padding-bottom: 1rem; /* py-4 (1rem = 16px) */
+    font-size: 0.875rem; /* text-sm (0.875rem = 14px) */
+}
+.explore:hover{
+    background-color: black;
+    color: white;
+    transition: all;
+    animation-duration: 5ms;
+}
+
+
+
+
+
+

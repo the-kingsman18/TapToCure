@@ -1,0 +1,100 @@
+version: "3.9"
+services:
+ sqlserver:
+   image: mcr.microsoft.com/mssql/server
+   ports:
+     - "1433:1433"
+   environment:
+    - ACCEPT_EULA=Y
+    - SA_PASSWORD=Passw0rd
+ mongodb:
+    image: mongo:latest
+    hostname: mongodb
+    ports:
+      - "27017:27017"
+
+ account-service:
+    image: ${DOCKER_REGISTRY-}accountservice
+    build:
+      context: .
+      dockerfile: Account-Service/Dockerfile
+    ports:
+    - 5001
+    depends_on:
+    - sqlserver
+  
+
+ api-gateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: Api-Gateway/Dockerfile
+    ports:
+    - 5000
+    
+
+
+ appointment-services:
+    image: ${DOCKER_REGISTRY-}appointmentservices
+    build:
+      context: .
+      dockerfile: Appointment-Services/Dockerfile
+    ports:
+    -  5002
+    depends_on:
+    - sqlserver
+
+
+ doctor-service:
+    image: ${DOCKER_REGISTRY-}doctorservice
+    build:
+      context: .
+      dockerfile: Doctor-Service/Dockerfile
+    ports:
+    - 5003
+    depends_on:
+    - sqlserver
+
+ feedback-service:
+    image: ${DOCKER_REGISTRY-}feedbackservice
+    build:
+      context: .
+      dockerfile: Feedback-Service/Dockerfile
+    ports:
+    - 5004
+    depends_on:
+    - mongodb
+
+
+ patient-service:
+    image: ${DOCKER_REGISTRY-}patientservice
+    build:
+      context: .
+      dockerfile: Patient-Service/Dockerfile
+    ports:
+    - 5005
+    depends_on:
+    - sqlserver
+
+
+ slot-service:
+    image: ${DOCKER_REGISTRY-}slotservice
+    build:
+      context: .
+      dockerfile: Slot-Service/Dockerfile
+    ports:
+    - 5006
+    depends_on:
+    - sqlserver
+
+
+ email-service:
+    image: ${DOCKER_REGISTRY-}emailservice
+    build:
+      context: .
+      dockerfile: Email-Service/Dockerfile
+    ports:
+    - 5007
+    depends_on:
+    - sqlserver
+

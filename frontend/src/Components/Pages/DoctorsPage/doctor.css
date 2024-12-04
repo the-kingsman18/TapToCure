@@ -1,0 +1,132 @@
+.doctorCard {
+    width: 25%; 
+    display: grid; 
+    grid-template-columns: repeat(3,1fr); 
+    gap: 1rem;
+    row-gap: 1.5rem; 
+}
+@media (max-width: 992px) {
+    .doctorCard {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 576px) {
+    .doctorCard {
+        grid-template-columns: 1fr; /* One column for small screens */
+    }
+
+    .columnStyle p {
+        padding-right: 2rem; /* Reduce padding on smaller screens */
+    }
+}
+.pstyle {
+    color: #4B5563; /* Equivalent to Tailwind's gray-600 */
+}
+.flex-responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem; 
+    margin-top: 1.25rem; /* Equivalent to mt-5 */
+}
+
+
+
+
+@media (min-width: 640px) { /* This is the breakpoint for 'sm' in Tailwind CSS */
+    .flex-responsive {
+        flex-direction: row;
+    }
+}
+
+.columnStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Equivalent to gap-4 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    color: #4B5563; /* Equivalent to text-gray-600 */
+}
+.columnStyle p{
+        width: 94vw;
+        width: auto; /* sm:w-auto */
+        padding-left: 0.75rem; /* Equivalent to pl-3 */
+        padding-top: 0.375rem; /* Equivalent to py-1.5 */
+        padding-bottom: 0.375rem; /* Equivalent to py-1.5 */
+        padding-right: 4rem; /* Equivalent to pr-16 */
+        border: 1px solid #484a4d; /* Equivalent to border-gray-300 */
+        border-radius: 0.25rem; /* Equivalent to rounded */
+        transition: all 0.2s; /* Equivalent to transition-all */
+        cursor: pointer; /* Equivalent to cursor-pointer */
+    
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .red {
+    background-color: red;
+  }
+
+  .filter-container {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+  }
+  
+  .filter-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-item select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 200px;
+    transition: border-color 0.3s;
+    padding-right: 30px; /* Add space for the icon */
+  }
+  
+  .filter-item select:hover,
+  .filter-item select:focus {
+    border-color: #4b0082;
+    outline: none;
+  }
+  
+  .filter-icon-button {
+    position: absolute;
+    right: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkgray;
+  }
+  
+  .filter-icon-button:hover .filter-icon {
+    color: #333;
+  }
+  
+  .filter-icon {
+    font-size: 1.2rem;
+    pointer-events: none; /* Prevent pointer events to avoid clicks directly on the icon */
+  }
+  

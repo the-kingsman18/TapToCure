@@ -1,0 +1,106 @@
+.span {
+    color: #4a5568; /* Gray-700 color */
+    font-weight: 500; /* Medium font weight */
+}
+.aboutus {
+    text-align: center;
+    font-size: 1.5rem; /* Equivalent to 2xl */
+    padding-top: 2.5rem; /* Equivalent to pt-10 */
+    color: #6b7280; /* Gray-500 color */
+}
+.param1 {
+    margin-top: 2.5rem; /* Equivalent to my-10 */
+    margin-bottom: 2.5rem; /* Equivalent to my-10 */
+    display: flex;
+    flex-direction: column; /* Default for smaller screens */
+    gap: 3rem; /* Equivalent to gap-12 */
+}
+
+@media (min-width: 768px) {
+    .param1 {
+        flex-direction: row; /* Changes to row on medium and larger screens */
+    }
+}
+.custom-width {
+    width: 100%; /* Equivalent to w-full */
+    max-width: 360px; /* Restricts maximum width */
+}
+
+@media (min-width: 768px) {
+    .custom-width {
+        max-width: 360px; /* Applies on medium and larger screens */
+    }
+}
+.customParams {
+    display: flex; /* Equivalent to 'flex' */
+    flex-direction: column; /* Equivalent to 'flex-col' */
+    justify-content: space-between; /* Equivalent to 'justify-content' */
+    gap: 1.5rem; /* Equivalent to 'gap-6' */
+    width: 100%; /* Default width for smaller screens */
+    font-size: 0.875rem; /* Equivalent to 'text-sm' */
+    color: #4B5563; /* Equivalent to 'text-gray-600' */
+}
+
+@media (min-width: 768px) {
+    .customParams {
+        width: 50%; /* Equivalent to 'md:w-2/4' */
+    }
+}
+.P1 {
+    font-size: 1.25rem; /* Equivalent to 'text-xl' */
+    margin-top: 1rem;   /* Equivalent to 'my-4' */
+    margin-bottom: 1rem;
+}
+.pp1 {
+    color: #4a5568; /* Equivalent to 'text-gray-700' */
+    font-weight: 600; /* Equivalent to 'font-semibold' */
+}
+.pp2{
+    color: #4a5568; /* Equivalent to 'text-gray-700' */
+    font-weight: 600; /* Equivalent to 'font-semibold' */
+    display: flex; /* Default to flex */
+    flex-direction: column; /* Default to flex-column */
+}
+
+@media (min-width: 768px) {
+    .pp2 {
+        flex-direction: row; /* Change to flex-row on medium screens */
+        margin: 20px; /* Equivalent to 'md-20' (assuming '20' is margin) */
+    }
+}
+.pp5{
+    border: 1px solid; /* Add specific border style if needed */
+    padding: 8px 2.5rem; /* Default padding: 8px top and bottom, 10px left and right */
+    display: flex; /* Flex container */
+    flex-direction: column; /* Column direction */
+    gap: 1.25rem; /* Equivalent to gap-5 */
+    font-size: 15px; /* Equivalent to text-[15px] */
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    transition: all 0.3s ease; /* Transition for all properties over 300ms */
+}
+
+@media (min-width: 640px) {
+    .pp5 {
+        padding-top: 16px; /* sm:py-16 */
+        padding-bottom: 16px; /* sm:py-16 */
+    }
+}
+
+@media (min-width: 768px) {
+    .pp5 {
+        padding-left: 16px; /* md:px-16 */
+        padding-right: 16px; /* md:px-16 */
+    }
+}
+
+.pp5:hover {
+    background-color:violet; /* hover:bg-primary; set primary color variable */
+    color: white; /* hover:text-white */
+}
+
+
+
+
+
+
+

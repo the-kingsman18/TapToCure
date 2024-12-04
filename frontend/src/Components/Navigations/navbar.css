@@ -1,0 +1,129 @@
+/* Global Navbar Styles */
+.navbar-container {
+    font-size: 0.875rem;
+    border-bottom: 2px solid blue;
+    position: relative;
+  }
+  
+  .navbar-toggler {
+    position: absolute; /* Adjust position */
+    left: 1rem; /* Space from the left */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Initially hide */
+  }
+  
+  .position-relative:hover .dropdown-menu {
+    display: block !important; 
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    color: #414142; 
+  }
+  
+  .dropdown-item:hover {
+    color: black; 
+    text-decoration: underline;
+    transition: all 0.10s ease;
+  }
+  
+
+.profile-img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border:1px solid rgb(8, 31, 160);
+
+  color: rgb(22, 110, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-img :hover{
+  background-color: #007bff;
+  color: white;
+}
+
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column; /* Stack on small screens */
+    }
+  }
+
+  /* Custom Button Style */
+.login-button {
+  background-color: #007bff;  /* Primary button color (same as Bootstrap's .btn-primary) */
+  color: white;                /* Text color white */
+  padding: 0.5rem 1.5rem;      /* Equivalent to px-4 (horizontal padding) */
+  border-radius: 50px;         /* Equivalent to rounded-pill */
+  font-weight: 300;            /* Equivalent to fw-light */
+  display: none;               /* Initially hidden */
+  border: none;
+}
+
+/* Navbar toggler styling for small screens */
+.navbar-toggler {
+  position: absolute;
+  left: 1rem;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+  display: none;
+}
+
+/* Show dropdown on hover */
+.position-relative:hover .dropdown-menu {
+  display: block !important;
+}
+
+/* Style dropdown items */
+.dropdown-item {
+  cursor: pointer;
+  color: #414142;
+}
+
+.dropdown-item:hover {
+  color: black;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+/* Navbar responsiveness */
+@media (max-width: 768px) {
+  /* Stack navbar items vertically */
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  /* Adjust login button to align left on small screens */
+  .login-button {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* Login Button Styling */
+.login-button {
+  background-color: #007bff; /* Matches Bootstrap primary color */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 300;
+  display: none;
+}
+
+/* Display login button from medium screens and above */
+@media (min-width: 768px) {
+  .login-button {
+    display: inline-block;
+  }
+}

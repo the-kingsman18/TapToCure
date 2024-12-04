@@ -1,0 +1,206 @@
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Default to column for smaller screens */
+    gap: 1rem; /* Tailwind's gap-4 translates to 1rem (16px) */
+}
+
+@media (min-width: 640px) { /* Tailwind's sm breakpoint is 640px */
+    .flex-container {
+        flex-direction: row; /* Change to row for small screens and up */
+    }
+}
+
+.custom-class12{
+    background-color: blue; /* Replace with your primary color */
+    width: 100%;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg translates to 0.5rem (8px) */
+}
+
+@media (min-width: 640px) { /* Tailwind's sm breakpoint is 640px */
+    .custom-class {
+        max-width: 18rem; /* Tailwind's max-w-72 translates to 18rem (288px) */
+    }
+}
+.custom-class1 {
+    flex: 1; /* Equivalent to flex-1 */
+    border: 1px solid #cbd5e1; /* Tailwind's border-gray-400 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    padding: 10px; 
+    background-color: white; /* Tailwind's bg-white */
+    margin-left: 0.5rem; /* Tailwind's mx-2 */
+    margin-right: 0.5rem; /* Tailwind's mx-2 */
+    margin-top: -80px; /* Tailwind's mt-[-80px] */
+}
+
+@media (min-width: 640px) { /* Tailwind's sm breakpoint is 640px */
+    .custom-class1 {
+        margin-top: 0;
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+}
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Gap equivalent to gap-2 (0.5rem) */
+    font-size: 0.875rem; /* Equivalent to text-sm (0.875rem) */
+    margin-top: 0.25rem; /* Equivalent to mt-1 (0.25rem) */
+    color: #4B5563; /* Equivalent to text-gray-600 (#4B5563 in Tailwind) */
+}
+.button {
+    padding-top: 0.125rem;   /* Equivalent to py-0.5 (0.125rem) */
+    padding-bottom: 0.125rem; /* Equivalent to py-0.5 (0.125rem) */
+    padding-left: 0.5rem;     /* Equivalent to px-2 (0.5rem) */
+    padding-right: 0.5rem;    /* Equivalent to px-2 (0.5rem) */
+    border: 1px solid currentColor; /* Border style, you can adjust color if needed */
+    font-size: 0.75rem;       /* Equivalent to text-xs (0.75rem) */
+    border-radius: 9999px;    /* Equivalent to rounded-full (full border radius) */
+}
+.para {
+    display: flex;                          /* Equivalent to flex */
+    align-items: center;                   /* Equivalent to items-center */
+    gap: 0.25rem;                          /* Equivalent to gap-1 (0.25rem) */
+    font-size: 0.875rem;                   /* Equivalent to text-sm (0.875rem) */
+    font-weight: 500;                      /* Equivalent to font-medium */
+    color: #1F2937;                        /* Equivalent to text-gray-900 (#1F2937) */
+    margin-top: 0.75rem;                   /* Equivalent to mt-3 (0.75rem) */
+}
+.para1 {
+    font-size: 0.875rem;               /* Equivalent to text-sm (0.875rem) */
+    color: #6B7280;                    /* Equivalent to text-gray-500 (#6B7280) */
+    max-width: 700px;                  /* Equivalent to max-w-[700px] */
+    margin-top: 0.25rem;               /* Equivalent to mt-1 (0.25rem) */
+}
+.para2 {
+    /* max-height: 75px; */
+    color: #6B7280;          /* Equivalent to text-gray-500 (#6B7280) */
+    font-weight: bold;        /* Equivalent to font-medium (500) */
+    margin-top: 1rem;        /* Equivalent to mt-4 (1rem) */
+}
+.para3{
+    /* */
+    margin-top: 1rem;           /* Equivalent to mt-4 (1rem) */
+    font-weight: 500;           /* Equivalent to font-medium (500) */
+    color: #4B5563;             /* Equivalent to text-gray-700 (#4B5563) */
+}
+
+/* For small screens and above */
+@media (min-width: 640px) {
+    .custom-style {
+        margin-left: 18rem;     /* Equivalent to ml-72 (18rem) */
+        padding-left: 1rem;     /* Equivalent to pl-4 (1rem) */
+    }
+}
+
+.para4 {
+    display: flex;
+    gap:0.2rem; /* This is the equivalent of 'gap-3' */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto; 
+    margin-top: 1rem;
+  }
+
+  .para5 {
+    text-align: center; /* Equivalent to 'text-center' */
+    padding-top: 1.5rem; /* 'py-6' means 1.5rem padding on top and bottom */
+    min-width: 4rem; /* 'min-w-16' translates to 4rem */
+    border-radius: 9999px; /* 'rounded-full' makes the element fully rounded */
+    cursor: pointer; /* Makes the cursor change to a pointer on hover */
+  }
+  
+  .slot-button {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* 8px top/bottom, 16px left/right */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+     /* Pointer cursor for interactivity */
+    margin: 0.25rem; /* Space between buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    
+    /* Optional: make text more button-like */
+    text-align: center;
+    font-size: 0.875rem; /* 14px */
+    color: #333; /* Text color */
+}
+
+.slot-button:hover {
+    background-color: #007bff; 
+    color: white; 
+    transform: scale(1.05);
+}
+
+.slot-button:active {
+    background-color: #0056b3; /* Darker color when active */
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.appointmentButton {
+    background-color: #0056b3; /* Use your primary color variable */
+    color: white;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 300; /* Light font weight */
+    padding: 10px;
+    border-radius: 9999px; /* Fully rounded */
+    border: none;
+    text-align: center;
+    float: right;
+}
+
+.selected-slot {
+    background-color: #007bff; /* Change to your desired highlight color */
+    color: white; /* Text color for the selected slot */
+    border: 2px solid #0056b3; /* Optional: Add a border to make it stand out */
+    transform: scale(1.05); /* Slightly enlarge the selected slot */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  }
+  
+/* ModalStyles.css */
+.overlayy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modall {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50vw;
+    text-align: center;
+}
+  
+.disabled-slot {
+    color: gray;
+    cursor: not-allowed;
+    pointer-events: none; /* Prevent clicking */
+  }
+  .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:transparent; /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  .modal-header {
+    background-color: #007bff; /* Header color */
+    color: white; /* Header text color */
+  }
+
+  .no-slots-message {
+    color: red;
+  }
+

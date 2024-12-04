@@ -1,0 +1,44 @@
+.doctorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns by default */
+    gap: 1rem; /* Gap between the cards */
+}
+
+/* Medium screens (two columns) */
+@media (max-width: 992px) {
+    .doctorGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screens (one column) */
+@media (max-width: 576px) {
+    .doctorGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.border-primary {
+    border-color: #007bff; /* Replace with your primary color */
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.stars {
+    display: inline-block;
+  }
+  
+  .fas.fa-star.filled {
+    color: #1e90ff; /* Blue color for filled stars */
+    font-size: 12px; /* Adjust to your preferred size */
+    margin-right: 2px;
+  }
+  
+  .far.fa-star.empty {
+    color: #d3d3d3; /* Light gray color for empty stars */
+    font-size: 12px;
+    margin-right: 2px;
+  }
+  

@@ -1,0 +1,53 @@
+.modaloverlay {
+    position: fixed; /* Keep the modal fixed on the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0,0,0,0.7); /* Optional: Solid background for entire screen */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the modal */
+}
+
+.modalcontent {
+    background: white; /* Solid white background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 30vw; /* Width set to 60% of the viewport */
+    height: 50vh; /* Height set to 100% of the viewport */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Space elements out */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.modalcontent h2 {
+    margin: 0; /* Remove default margin */
+}
+
+.modalcontent p {
+    margin: 15px 0; /* Add margin for spacing */
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between; /* Space buttons to the ends */
+    margin-top: auto; /* Push buttons to the bottom */
+}
+
+.buttons {
+    background-color: blue; /* Blue background for buttons */
+    color: white; /* White text for buttons */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Padding for buttons */
+    cursor: pointer;
+    flex: 1; /* Ensure buttons take equal space */
+    margin: 0 5px; /* Small margin between buttons */
+}
+
+.buttons:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}

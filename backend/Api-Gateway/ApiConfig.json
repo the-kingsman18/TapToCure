@@ -1,0 +1,269 @@
+{
+    "GlobalConfiguration": [
+        {
+            "BaseUrl": "https://localhost:8080"
+        }
+
+    ],
+    "Routes": [
+
+        //Configure gate way for Feedback Service
+        {
+
+            "DownstreamPathTemplate": "/api/feedback",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7247
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/feedback",
+            "UpstreamHttpMethods": [ "Get", "Post" ]
+        },
+        //Configure gate way for Doctor Service
+        {
+            "DownstreamPathTemplate": "/api/Doctors/approved",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/approved",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Doctors/pending",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/pending",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Doctors/speciality/{speciality}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/speciality/{speciality}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Doctors/{id}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/{id}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        },
+        //post the status of the doctor
+        {
+            "DownstreamPathTemplate": "/api/Doctors/SetAvailability",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/SetAvailability",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        //get the status of the doctor
+        {
+            "DownstreamPathTemplate": "/api/Doctors/CheckAvailability",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/CheckAvailability",
+            "UpstreamHttpMethod": [ "Get" ],
+            "Parameters": [
+                {
+                    "Name": "doctorId",
+                    "Value": "{id}"
+                },
+                {
+                    "Name": "date",
+                    "Value": "{date}"
+                }
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Doctors/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "doctor-service20241201155741.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Doctors/{everything}",
+            "UpstreamHttpMethod": [ "Put" ]
+        },
+
+        //Configure gate way for Account Service
+        //post register
+        //post login data /login
+        //post /request-otp
+        //post /verify-otp
+        {
+            "DownstreamPathTemplate": "/api/accounts/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "account-service20241201150954.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/accounts/{everything}",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        //get  allusers  /GetAllUser
+        //get user by /{id}
+        //get user by role /role/{role}
+        {
+            "DownstreamPathTemplate": "/api/accounts/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "account-service20241201150954.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/accounts/{everything}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        //update user by id /{id}
+       
+        //update password(resetpassword)  /resetpassword
+        {
+            "DownstreamPathTemplate": "/api/accounts/{id}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "account-service20241201150954.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/accounts/{id}",
+            "UpstreamHttpMethod": [ "Put" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/accounts/{id}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "account-service20241201150954.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/accounts/{id}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        },
+
+        //Configure gate way for Email Service
+        //url of api gateway
+        //"https": //localhost:8080/gateway/email/send
+        {
+            "DownstreamPathTemplate": "/api/email/send",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "email-service-d4guancwbefycwh2.centralindia-01.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/email/send",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+
+        //Configure Api Gateway for Appointment Service
+        //get all appointments
+        //get appointments by id
+        //put appointment by id
+        //delete appointment by id
+        //post appointment
+        //get doctor appointment by doctor/{DoctorId}
+        //get patient appointment by patient/{PatientId}
+        //update appointment status as cancelled through appointmentid  /Cancel/{id}
+        //Update appointment status as Completed through appointmentid /Completed/{id}
+        {
+            "DownstreamPathTemplate": "/api/appointment/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "appointment-services20241201151636.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/appointment/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/appointment/available/{doctorId}/{date}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "appointment-services20241201151636.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/appointment/available/{doctorId}/{date}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        //Configure gate way for Time slot Service
+        //post time slot by a doctor /AddSlot
+        //get time slot by doctorid  /bydoctor/{DoctorId}
+        //get slot by slotid  /{slotId}
+        //update time slot /update/{slotId}
+        //Delete slot  /{slotId}
+        {
+            "DownstreamPathTemplate": "/api/Slot/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "slot-service20241201160448.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/slot/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        },
+        //Configure gateway for Patient-service
+        //get all patients
+        //get patient details by Patientid  /{PatientId}
+        //post the details of Patient through PatientId  /{PatientId}
+        //Update Patient detrails through patientid   /{PatientId}
+        //Delete Patient through Patientid   /{PatientId}
+        {
+            "DownstreamPathTemplate": "/api/patient/{everything}",
+            "DownstreamSchema": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "patient-service20241201160214.azurewebsites.net",
+                    "Port": 443
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/patient/{everything}",
+            "UpstreamHttpMethod": [ "GET", "POST", "PUT","DELETE" ]
+        }
+    ]
+}

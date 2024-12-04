@@ -1,0 +1,161 @@
+
+
+
+
+.doctor-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+.profile-image-container {
+    flex: 1 1 150px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-field label {
+    font-weight: bold;
+    width: 130px;
+}
+
+.detail-field p,
+.detail-field input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.detail-field input {
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 10px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: #007bff;
+}
+
+.save-btn {
+    background-color: #007bff;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.save-btn:hover {
+    background-color:  #0056b3;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .doctor-profile {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .profile-image-container {
+        max-width: 120px;
+        margin-bottom: 20px;
+    }
+
+    .profile-details {
+        width: 100%;
+        padding: 0;
+    }
+
+    .detail-field label {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .detail-field p,
+    .detail-field input {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .edit-btn,
+    .save-btn,
+    .cancel-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+.small-swal-popup {
+    width: 300px !important; /* Adjust width */
+    padding: 10px !important; /* Adjust padding */
+}
+
+.small-swal-popup .swal2-title {
+    font-size: 18px !important; /* Smaller title font size */
+}
+
+.small-swal-popup .swal2-content {
+    font-size: 14px !important; /* Smaller text font size */
+}
+
+.small-swal-popup .swal2-actions .swal2-confirm {
+    font-size: 14px !important; /* Smaller button font size */
+    padding: 6px 12px !important;
+}

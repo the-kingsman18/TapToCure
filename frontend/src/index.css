@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  font-family: Outfit;
+}
+.nav-link.active {
+  text-decoration: aqua; /* Underline the active link */
+  font-weight: bold; /* Optional: make the active link bold */
+}
+::-webkit-scrollbar{
+  display: none;
+}

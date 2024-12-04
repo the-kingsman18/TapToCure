@@ -1,0 +1,69 @@
+/* General styling for the register form container */
+.registercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make it take full screen height */
+  padding: 50px 0; /* Extra padding to avoid overlapping */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Styling for the register form box */
+.registerbox {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form element styling */
+.formgroup {
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input field styling */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error message styling */
+.errormessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+.registerbutton {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registerbutton:hover {
+  background-color: darkviolet;
+}
+
+/* Adjusting padding and margin for better layout */
+.registercontainer p {
+  margin-top: 15px;
+}

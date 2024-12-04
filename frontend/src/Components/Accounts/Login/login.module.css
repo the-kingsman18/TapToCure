@@ -1,0 +1,96 @@
+.pagecontainer{
+  display: flex;
+  height: 100vh;
+}
+
+.imagecontainer{
+flex:1;
+border-radius: 100px;
+height:10vh;
+}
+.logincontainer {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+   
+  .loginbox {
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+   
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+   
+  p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+   
+  .formgroup {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+   
+  label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+   
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+   
+  input:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+   
+  .loginbutton {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+   
+  .loginbutton:hover {
+    background-color: #357abd;
+  }
+   
+  .createaccount {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+  }
+   
+  .createaccount a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+   
+  .createaccount a:hover {
+    text-decoration: underline;
+  }

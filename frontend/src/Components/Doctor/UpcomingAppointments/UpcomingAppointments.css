@@ -1,0 +1,237 @@
+/* General layout */
+.pending-approvals {
+    display: flex;
+    flex-direction: column; /* Stack on smaller screens */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+  }
+
+  .icon {
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  
+ 
+  
+  
+  @media (min-width: 768px) {
+    .pending-approvals {
+      flex-direction: row; /* Row layout on larger screens */
+    }
+  }
+  
+  
+  .gradient-heading {
+    font-size: 2.5em; /* Adjust font size as needed */
+    background: linear-gradient(90deg, #c7d1d6, #abe0e9, #a3cbf3); /* Gradient from light blue to dark blue */
+    -webkit-background-clip: text; /*For Safari*/
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent to show the gradient */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add some margin */
+  }
+  
+  .pending-approvals__sidebar {
+    width: 220px;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4, #1E90FF, #4169E1, #00008B);
+    padding: 20px;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .pending-approvals__sidebar {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Sidebar heading */
+  .pending-approvals__sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .pending-approvals__sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pending-approvals__sidebar ul li {
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #3c70d9;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .pending-approvals__sidebar ul li:hover {
+    background-color: #2b59c3;
+  }
+  
+  /* Content area */
+  .pending-approvals__content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2b59c3;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards styles */
+  .pending-approvals__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .pending-approvals__doctor-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    flex: 1 1 calc(25% - 20px);
+    min-width: 250px;
+    max-width: 350px;
+    transition: transform 0.2s;
+  }
+  
+  .pending-approvals__doctor-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Popup styles */
+  .pending-approvals__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
+  
+  .pending-approvals__doctor-popup {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+  }
+  
+  @media (max-width: 768px) {
+    .pending-approvals__doctor-popup {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pending-approvals__doctor-popup {
+      width: 95%;
+      padding: 20px; /* Reduce padding for extra small screens */
+    }
+  }
+  
+  /* Buttons styles */
+  .pending-approvals__buttons {
+    display: flex;
+    /* justify-content: space-between; */
+    border-radius: 10px;
+    padding: 7px;
+    border: 2px solid lightgray;
+
+  }
+
+  .pending-approvals__buttons:hover{
+    background-color: #00008B;
+    color: whitesmoke;
+  }
+  
+  .pending-approvals__buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 5px;
+    transition: background-color 0.2s;
+    
+  }
+  
+  .pending-approvals__back-button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+    /* background-color: #2b59c3; */
+  }
+  
+  .approve-button {
+    background-color: green;
+    color: white; /* Optional: Change text color for better contrast */
+  }
+  
+  .approve-button:hover {
+    background-color: darkgreen; /* Optional: Darker shade on hover */
+  }
+  
+  .reject-button {
+    background-color: red;
+    color: white; /* Optional: Change text color for better contrast */
+  }
+  
+  .reject-button:hover {
+    background-color: darkred; /* Optional: Darker shade on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1024px) {
+    .pending-approvals__doctor-card {
+      flex: 1 1 calc(33% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pending-approvals__doctor-card {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pending-approvals__doctor-card {
+      flex: 1 1 100%;
+    }
+  }
+
+  .date-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .date-filter label {
+    margin-right: 0.5rem;
+  }
+  .date-filter input{
+    max-width: 300px;
+  }
+  

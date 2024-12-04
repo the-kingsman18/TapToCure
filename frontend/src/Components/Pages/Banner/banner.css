@@ -1,0 +1,131 @@
+.full-absolute-bottom-right {
+    width: 100%; /* w-full */
+    position: absolute; /* absolute */
+    bottom: 0; /* bottom-0 */
+    right: 0; /* right-0 */
+    max-width: 768px; /* max-w-md (assuming md corresponds to 768px) */
+}
+
+.flex-custom {
+    display: flex; /* flex */
+     background-color: var(--bs-primary); 
+    
+    border-radius: 0.375rem; /* rounded-lg */
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    margin-top: 5rem; /* my-20 */
+    margin-bottom: 5rem; /* my-20 */
+}
+
+@media (min-width: 576px) {
+    .flex-custom {
+        padding-left: 2.5rem; /* px-sm-10 */
+        padding-right: 2.5rem; /* px-sm-10 */
+    }
+}
+
+@media (min-width: 768px) {
+    .flex-custom {
+        padding-left: 3.5rem; /* px-md-14 */
+        padding-right: 3.5rem; /* px-md-14 */
+    }
+}
+
+@media (min-width: 992px) {
+    .flex-custom {
+        padding-left: 3rem; /* px-lg-12 */
+        padding-right: 3rem; /* px-lg-12 */
+        margin-left: 2.5rem; /* mx-md-10 */
+        margin-right: 2.5rem; /* mx-md-10 */
+    }
+}
+.hidden-md-block {
+    display: none; /* hidden */
+    position: relative; /* relative */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .hidden-md-block {
+        display: block; /* md:block */
+        width: 50%; /* md:w-1/2 */
+    }
+}
+
+@media (min-width: 992px) { /* lg breakpoint */
+    .hidden-md-block {
+        width: 370px; /* lg:w-[370px] */
+    }
+}
+
+.flex-1-custom {
+    flex: 1; /* flex-1 */
+    padding-top: 2rem; /* py-8 */
+    padding-bottom: 2rem; /* py-8 */
+}
+
+@media (min-width: 576px) {
+    .flex-1-custom {
+        padding-top: 2.5rem; /* sm:py-10 */
+        padding-bottom: 2.5rem; /* sm:py-10 */
+    }
+}
+
+@media (min-width: 768px) {
+    .flex-1-custom {
+        padding-top: 4rem; /* md:py-16 */
+        padding-bottom: 4rem; /* md:py-16 */
+    }
+}
+
+@media (min-width: 992px) {
+    .flex-1-custom {
+        padding-top: 6rem; /* lg:py-24 */
+        padding-bottom: 6rem; /* lg:py-24 */
+        padding-left: 1.25rem; /* lg:pl-5 */
+    }
+}
+
+.text-responsive {
+    font-weight: 600; /* font-semibold */
+    color: white; /* text-white */
+}
+
+.text-responsive {
+    font-size: 1.25rem; /* text-xl */
+}
+
+@media (min-width: 576px) {
+    .text-responsive {
+        font-size: 1.5rem; /* sm:text-2xl */
+    }
+}
+
+@media (min-width: 768px) {
+    .text-responsive {
+        font-size: 1.875rem; /* md:text-3xl */
+    }
+}
+
+@media (min-width: 992px) {
+    .text-responsive {
+        font-size: 3.125rem; /* lg:text-5xl */
+    }
+}
+.btn12{
+    background-color :white;
+    font-size: small;
+    color : black;
+    border-radius: 10px;
+    padding: 10px;
+}
+.btn12:hover{
+    scale: 1.1;
+    transition: all;
+}
+
+.small-text {
+    font-size: 1rem; /* Adjust the size as needed */
+  }
+
+
+
